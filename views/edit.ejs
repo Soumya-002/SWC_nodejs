@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://kit.fontawesome.com/08de40b706.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="/main.css">
+  <link rel="stylesheet" href="/styles.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor" crossorigin="anonymous">
+    <title>Document</title>
+
+</head>
+<body>
+
+  <%- include('./partials/nav.ejs') %>
+
+      <div class="main">
+        <div class="create-app content">
+          <form action="/edit/<%= crud._id %>" method="POST">
+            <label for="title">Name:</label>
+            <input type="text" id="title" name="name" value="<%= crud.name %>" required>
+            <label for="snippet">Title:</label>
+            <input type="text" id="snippet" name="title" value="<%= crud.title %>" required>
+            <label for="body">Content:</label>
+            <input type="text" id="body" name="content" value="<%= crud.content %>" required>
+            <button>Submit</button>
+          </form>
+          </div>
+        </div>
+     
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/js/bootstrap.bundle.min.js" integrity="sha384-pprn3073KE6tl6bjs2QrFaJGz5/SUsLqktiwsUTF55Jfv3qYSDhgCecCxMW52nD2" crossorigin="anonymous"></script>
+</body>
+</html>
