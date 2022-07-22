@@ -3,6 +3,7 @@ const mongoose=require('mongoose');
 const morgan=require('morgan');
 const Register = require('./model/register');
 const homerouter=require('./routes/homeroute');
+const port= process.env.PORT || 8000;
 
 
 const app=express();
@@ -69,7 +70,9 @@ try{
 
 })
 
-
+app.listen(port,() => {
+  console.log(`listening to the port no at ${port}`);
+})
 
 app.use((req, res) => {
   res.status(404).render('404');
